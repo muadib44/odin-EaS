@@ -10,6 +10,9 @@ function createGrid(size) {
         square.classList.add('grid-square');
         square.style.width = `${squareSize}%`;
         square.style.height = `${squareSize}%`;
+        square.addEventListener('mouseover', () => {
+            square.style.backgroundColor = 'black';
+        });
         fragmant.appendChild(square);
    }
     container.appendChild(fragmant);
