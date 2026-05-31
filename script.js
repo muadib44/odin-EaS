@@ -1,3 +1,4 @@
+const sizeBtn = document.querySelector('#size-btn');
 const container = document.querySelector('.container');
 
 function createGrid(size) {
@@ -18,5 +19,15 @@ function createGrid(size) {
    }
     container.appendChild(fragmant);
 }
+
+sizeBtn.addEventListener('click', () => {
+    let size = parseInt(prompt('Enter grid size (1-100):'));
+        if (isNaN(size) || size < 1 || size > 100) {
+        alert('Please enter a valid number between 1 and 100.');
+        return;
+        }
+        createGrid(size);
+    }
+)
 
 createGrid(16);
