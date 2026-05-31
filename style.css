@@ -11,6 +11,10 @@ body {
     align-items: center;
 }
 
+h1 {
+    margin-top:20px;
+}
+
 .container {
     width: 500px;
     height: 500px;
@@ -23,8 +27,13 @@ body {
 
 .grid-square {
     box-sizing:border-box;
-    border: 1px solid greenyellow;
+    border: 1px solid rgb(62, 59, 59);
     margin: 0;
+}
+
+.buttons #size-btn, #reset-btn {
+    border: 1px solid #333;
+
 }
 
 #size-btn {
