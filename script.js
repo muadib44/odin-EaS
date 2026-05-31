@@ -1,5 +1,6 @@
 const sizeBtn = document.querySelector('#size-btn');
 const container = document.querySelector('.container');
+const resetBtn = document.querySelector('#reset-btn');
 
 function createGrid(size) {
    container.innerHTML = ''; 
@@ -13,7 +14,10 @@ function createGrid(size) {
         square.style.flexGrow = '1';
         square.style.flexShrink = '1';
         square.addEventListener('mouseover', () => {
-            square.style.backgroundColor = 'aqua';
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            square.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
         });
         fragmant.appendChild(square);
    }
@@ -29,5 +33,9 @@ sizeBtn.addEventListener('click', () => {
         createGrid(size);
     }
 )
+
+resetBtn.addEventListener('click', () => {
+    createGrid(16);
+})
 
 createGrid(16);

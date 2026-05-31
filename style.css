@@ -26,3 +26,21 @@ body {
     border: 1px solid greenyellow;
     margin: 0;
 }
+
+#size-btn {
+    margin:10px 10px;
+    color:white;
+    font-size: bold;
+    background-color: blueviolet;
+    height: 40px;
+    width: 120px;
+}
+
+#reset-btn {
+    margin:10px 10px;
+    color:white;
+    font-size: bold;
+    background-color: green;
+    height: 40px;
+    width: 120px;
+}
